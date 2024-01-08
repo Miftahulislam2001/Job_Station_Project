@@ -5,11 +5,12 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Admin from './components/Layout/Layout/Admin.jsx';
-import Home from './components/Layout/Home/Home.jsx';
-import Blog from './components/Layout/Blog/Blog.jsx';
-import About from './components/Layout/About/About.jsx';
-import AppliedJob from './components/Layout/AppliedJob/AppliedJob.jsx';
+import Admin from './components/Layout/Admin';
+import Home from './components/Home/Home';
+import Blog from './components/Blog/Blog';
+import About from './components/About/About';
+import AppliedJob from './components/AppliedJob/AppliedJob';
+
 
 const router = createBrowserRouter([
   {
@@ -18,14 +19,15 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home/>
+        element: <Home/>,
+        loader: ()=> fetch('jobCategory.json')
       },
       {
         path: "blog",
         element: <Blog></Blog>
       },
       {
-        path: "about",
+        path: "statistic",
         element: <About></About>
       },
       {
@@ -37,7 +39,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+
     <RouterProvider router={router} />
-  </React.StrictMode>,
+
 )

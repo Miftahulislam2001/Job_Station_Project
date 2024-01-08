@@ -1,0 +1,26 @@
+[
+	{
+		"id": 1,
+		"jobCategory": "IT",
+		"numOfJobs": "10 Jobs Available" ,
+		"img": "https://cdn-icons-png.flaticon.com/512/9872/9872397.png"
+	},
+	{
+		"id": 2,
+		"jobCategory": "Marketing",
+		"numOfJobs": "5 Jobs Available" ,
+		"img": "https://cdn-icons-png.flaticon.com/512/1997/1997928.png"
+	},
+	{
+		"id": 3,
+		"jobCategory": "Finance",
+		"numOfJobs": "8 Jobs Available" ,
+		"img": "https://cdn-icons-png.flaticon.com/512/781/781902.png"
+	},
+	{
+		"id": 4,
+		"jobCategory": "Sales",
+		"numOfJobs": "12 Jobs Available" ,
+		"img": "https://cdn-icons-png.flaticon.com/512/9685/9685379.png"
+	}
+]
