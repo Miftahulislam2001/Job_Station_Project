@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Bars3BottomRightIcon, Bars3CenterLeftIcon, BeakerIcon } from '@heroicons/react/24/solid'
 
 const Header = () => {
     return (
@@ -7,7 +8,7 @@ const Header = () => {
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="lg:hidden px-3">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+        <Bars3CenterLeftIcon className="h-8 w-8 text-blue-500 font-bold" />
       </div>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
       <li><Link to="/">Home</Link></li>
@@ -17,7 +18,7 @@ const Header = () => {
       
       </ul>
     </div>
-    <a className="text-xl font-semibold text-gray-700">JobStation</a>
+    <a className="text-2xl font-bold text-gray-700 font-serif md:ps-8">JobStation</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 font-semibold text-gray-700">
