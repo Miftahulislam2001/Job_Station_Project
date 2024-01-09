@@ -1,12 +1,13 @@
 import { BriefcaseIcon, CurrencyDollarIcon, EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid';
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
+import { addToDb } from '../../Utility/fakeDB';
 
 const DetailsJob = () => {
 	const [detailData, setDetailData] = useState({})
 	const [cards, setCards] = useState([])
 	const prams = useParams()
-	console.log(detailData);
+
 	const {
 		companyName,
 		contact,
@@ -124,8 +125,8 @@ const DetailsJob = () => {
 					</div>
 
 					<div
-						
-						className='primary-btn text-center'
+						onClick={()=> addToDb(id)}
+						className='primary-btn text-center mt-3'
 					>
 						<button className="btn w-full">Apply Now</button>
 					</div>
