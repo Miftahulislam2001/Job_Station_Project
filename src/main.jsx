@@ -10,7 +10,7 @@ import Home from './components/Home/Home';
 import Blog from './components/Blog/Blog';
 import About from './components/About/About';
 import AppliedJob from './components/AppliedJob/AppliedJob';
-
+import DetailsJob from './components/DetailsJob/DetailsJob'
 
 const router = createBrowserRouter([
   {
@@ -21,6 +21,11 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home/>,
         loader: ()=> fetch('cartData.json'),
+      },
+      {
+        path: "detailsJob/:id",
+        element: <DetailsJob></DetailsJob>,
+        
       },
       {
         path: "blog",

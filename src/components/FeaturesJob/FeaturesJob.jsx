@@ -44,7 +44,7 @@ const FeaturesJob = ({ jobData }) => {
 
                 {/* View Details Button */}
                 <div>
-					<Link to=''>
+					<Link to={`detailsJob/${id}`}>
 						<button className='btn'>View Details</button>
 					</Link>
 				</div>
