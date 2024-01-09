@@ -23,7 +23,8 @@ const Home = () => {
 
 
     return (
-        <div>
+        <div className='my-2'>
+
             <div className='my-container mt-20 flex flex-col justify-between lg:flex-row'>
                 {/* Text Content */}
                 <div className='mb-10 lg:max-w-lg  lg:pr-5 lg:mb-0'>
@@ -95,6 +96,12 @@ const Home = () => {
                     }
                 </div>
             </div>
+
+            {/* See All Job Button */}
+            <div className='text-center mt-5'>
+				<button className='btn'>See All Jobs</button>
+			</div>
+
         </div>
 
     );

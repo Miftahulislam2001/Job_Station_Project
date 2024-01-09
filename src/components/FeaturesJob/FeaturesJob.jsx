@@ -26,7 +26,9 @@ const FeaturesJob = ({ jobData }) => {
 
                 {/* Job Type */}
                 <div className='flex gap-2 items-center'>
-                    <p className='border border-gray-600 py-1 px-3 rounded-md'>{jobType}</p>
+                    {
+                        jobType ?.map((type, index)=> <p className='border border-gray-600 py-1 px-3 rounded-md' key={index}>{type}</p>)
+                    }
                 </div>
 
                 {/* Location & Salary */}
