@@ -24,20 +24,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/detailsJob/:id",
-        element: <DetailsJob></DetailsJob>,
-        
+        element: <DetailsJob/>,
       },
       {
         path: "blog",
-        element: <Blog></Blog>
+        element: <Blog/>
       },
       {
         path: "statistic",
-        element: <About></About>
+        element: <About/>
       },
       {
         path: "appliedJob",
-        element: <AppliedJob></AppliedJob>
+        element: <AppliedJob/>
       },
     ]
   },
