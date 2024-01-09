@@ -12,6 +12,8 @@ import FeaturesJob from "../FeaturesJob/FeaturesJob";
 const Home = () => {
  const featuresData = useLoaderData([]);
 
+ 
+
   const [categoryData, setCategoryData] = useState([]);
   const [isShowAllCart, setIsShowAllCart] = useState(false);
   
