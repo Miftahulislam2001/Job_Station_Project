@@ -1,16 +1,28 @@
 import { ArrowTrendingUpIcon, ShoppingCartIcon } from '@heroicons/react/24/solid';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import Lottie from "lottie-react";
 import AnimationIcon from '../../assets/programer.json'
 import JobCategory from '../JobCategory/JobCategory';
+import FeaturesJob from '../FeaturesJob/FeaturesJob';
+
 
 const Home = () => {
-    const categoryData = useLoaderData();
+    const categoryData = useLoaderData()
+    const [featuresData, setFeaturesData] = useState([])
+
+    useEffect(() => {
+        const featureDataFetch = async () => {
+            const res = await fetch('cartData.json')
+            const featuresData = await res.json()
+            setFeaturesData(featuresData);
+            console.log(featuresData);
+        }
+        featureDataFetch()
+    }, [])
+
 
     return (
-
-
         <div>
             <div className='my-container mt-20 flex flex-col justify-between lg:flex-row'>
                 {/* Text Content */}
@@ -64,6 +76,22 @@ const Home = () => {
                 <div className='grid md:grid-cols-4 gap-5'>
                     {
                         categoryData.map(category => <JobCategory key={category.id} category={category} />)
+                    }
+                </div>
+            </div>
+
+            {/* Features Job Section */}
+            <div className="my-container mt-7">
+                <h2 className='text-center text-[48px] font-bold'>
+                    Featured Jobs
+                </h2>
+                <p className='text-center my-4'>
+                    Explore thousands of job opportunities with all the
+                    information you need. Its your future
+                </p>
+                <div className='grid md:grid-cols-2 gap-6'>
+                    {
+                        featuresData.map(features => <FeaturesJob key={features.id} jobData = {features}/>)
                     }
                 </div>
             </div>
