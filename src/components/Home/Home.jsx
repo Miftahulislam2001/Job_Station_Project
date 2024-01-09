@@ -10,7 +10,7 @@ import JobCategory from "../JobCategory/JobCategory";
 import FeaturesJob from "../FeaturesJob/FeaturesJob";
 
 const Home = () => {
- const featuresData = useLoaderData();
+ const featuresData = useLoaderData([]);
 
   const [categoryData, setCategoryData] = useState([]);
   const [isShowAllCart, setIsShowAllCart] = useState(false);
@@ -93,7 +93,7 @@ const Home = () => {
          <div className="grid md:grid-cols-2 gap-6">
           {!isShowAllCart
             ? featuresData
-                .slice(0, 4)
+                ?.slice(0, 4)
                 .map((features) => (
                   <FeaturesJob
                     key={features.id}
