@@ -10,18 +10,20 @@ import JobCategory from "../JobCategory/JobCategory";
 import FeaturesJob from "../FeaturesJob/FeaturesJob";
 
 const Home = () => {
-  const categoryData = useLoaderData();
-  const [featuresData, setFeaturesData] = useState([]);
+ const featuresData = useLoaderData();
+
+  const [categoryData, setCategoryData] = useState([]);
   const [isShowAllCart, setIsShowAllCart] = useState(false);
-  console.log(isShowAllCart);
+  
   useEffect(() => {
-    const featureDataFetch = async () => {
-      const res = await fetch("cartData.json");
-      const featuresData = await res.json();
-      setFeaturesData(featuresData);
+    const fetchData = async () => {
+        const res = await fetch("jobCategory.json");
+        const data = await res.json();
+        setCategoryData(data);
     };
-    featureDataFetch();
-  }, []);
+    fetchData();
+    
+}, [])
 
   return (
     <div className="my-2">
@@ -66,7 +68,7 @@ const Home = () => {
       </div>
 
       {/* Job Category Section */}
-      <div className="my-container mt-7">
+       <div className="my-container mt-7">
         <h2 className="text-center text-gray-800 text-3xl font-bold font-sans">
           Job Category List
         </h2>
@@ -79,7 +81,7 @@ const Home = () => {
             <JobCategory key={category.id} category={category} />
           ))}
         </div>
-      </div>
+      </div> 
 
       {/* Features Job Section */}
       <div className="my-container mt-7">
@@ -88,7 +90,7 @@ const Home = () => {
           Explore thousands of job opportunities with all the information you
           need. Its your future
         </p>
-        <div className="grid md:grid-cols-2 gap-6">
+         <div className="grid md:grid-cols-2 gap-6">
           {!isShowAllCart
             ? featuresData
                 .slice(0, 4)
@@ -101,7 +103,7 @@ const Home = () => {
             : featuresData.map((features) => (
                 <FeaturesJob key={features.id} jobData={features}></FeaturesJob>
               ))}
-        </div>
+        </div> 
       </div>
 
       {/* See All Job Button */}
