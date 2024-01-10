@@ -1,9 +1,13 @@
-# React + Vite
+## JobStation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Link
+Hosted in Netlify -> [JobStation](https://gleeful-scone-d850f8.netlify.app/)
 
-Currently, two official plugins are available:
+## This website feature
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# Job_Station_Project
+- Apply for job
+- Job details page 
+- Job filter by (Remote) & (Onsite)
+- Assignment marks chart with recharts
+- Dedicated blog page
+- Animation 
