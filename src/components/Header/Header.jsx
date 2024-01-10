@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Bars3CenterLeftIcon } from '@heroicons/react/24/solid'
+import ActiveLink from '../ActiveLink/ActiveLink';
 
 const Header = () => {
     return (
@@ -11,10 +12,10 @@ const Header = () => {
                         <Bars3CenterLeftIcon className="h-8 w-8 text-blue-500 font-bold" />
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/statistic">Statistics</Link></li>
-                        <li><Link to="/appliedJob">Applied Job</Link></li>
-                        <li><Link to="/blog">Blog</Link></li>
+                        <li><ActiveLink to="/">Home</ActiveLink></li>
+                        <li><ActiveLink to="/statistic">Statistics</ActiveLink></li>
+                        <li><ActiveLink to="/appliedJob">Applied Job</ActiveLink></li>
+                        <li><ActiveLink to="/blog">Blog</ActiveLink></li>
 
                     </ul>
                 </div>
@@ -22,10 +23,10 @@ const Header = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 font-semibold text-gray-700">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/statistic">Statistics</Link></li>
-                    <li><Link to="/appliedJob">Applied Job</Link></li>
-                    <li><Link to="/blog">Blog</Link></li>
+                        <li><ActiveLink to="/">Home</ActiveLink></li>
+                        <li><ActiveLink to="/statistic">Statistics</ActiveLink></li>
+                        <li><ActiveLink to="/appliedJob">Applied Job</ActiveLink></li>
+                        <li><ActiveLink to="/blog">Blog</ActiveLink></li>
                 </ul>
             </div>
             <div className="navbar-end">

@@ -1,31 +1,30 @@
-import React, { useState } from 'react';
-import { getStoredCart } from '../../Utility/fakeDB';
-import { Cog6ToothIcon } from '@heroicons/react/24/solid';
+import React, { useEffect, useState } from 'react';
+import { getDataTOLocalStorage } from '../../Utility/fakeDB';
+
 
 const AppliedJob = () => {
-    const [appliedData, setAppliedData] = useState();
+    // load all Data...
+    const [allData, setAllData] = useState([]);
+    //console.log(allData);
 
-    const fetchData = async () =>{
-        const productData = await fetch('cartData.json')
-        const products = await productData.json()
-        
-        const savedProduct = getStoredCart();
-  
-        let productArray = [];
-     
-        const foundProduct = products.filter((product, index) => product.id === id)
-        console.log(foundProduct);
-        const result = await fetchData();
-        
-    }
+    // get data local storage
+    const appliedJobsID = getDataTOLocalStorage();
+    let keysArray = Object.keys(appliedJobsID);
+    console.log(keysArray);
 
-   fetchData()
+    useEffect(() => {
+        fetch('cartData.json')
+            .then(res => res.json())
+            .then(data => setAllData(data))
+    }, [])
+
+    
 
     return (
         <div>
-            <h2>This Is AppliedJob Compo</h2>
+            <h2>Here show Applied Jobs </h2>
         </div>
     );
 };
 
-export default AppliedJob;
+export default AppliedJob; 

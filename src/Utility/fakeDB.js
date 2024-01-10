@@ -1,33 +1,28 @@
 
-//========== Add To Local Storage =========//
-let shoppingCart = {};
+
 const addToDb = (id) =>{
-
-// get previous data from local storage 
-    const storeCart = localStorage.getItem("shoppingCart");
-    if(storeCart){
-        shoppingCart = JSON.parse(storeCart)
-       
+    let jobs = {};
+    const appliedJobs = getDataTOLocalStorage();
+    
+    if(id in appliedJobs){
+        alert('Already Apply')
+    }else{
+        appliedJobs[id] = 1;
     }
-    console.log("store cart "+storeCart);
-    // const newItem = {id:id}
-     shoppingCart = {...shoppingCart, id:id}
-    console.log(shoppingCart);
-
-    localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart))
+    localStorage.setItem('apply-jobs', JSON.stringify(appliedJobs))
 }
 
-//========= get stored data from local storage =========//
-const getStoredCart = () =>{
-    let shoppingCart = {};
-    const storedCart = localStorage.getItem("shoppingCart")
-    if(storedCart){
-        shoppingCart = JSON.parse(storedCart)
+const getDataTOLocalStorage = () =>{
+    let data = {};
+    const appliedJobs = localStorage.getItem('apply-jobs');
+    
+    if(appliedJobs){
+        data = JSON.parse(appliedJobs)
     }
-    return shoppingCart;
+    return data;
 }
 
 export {
     addToDb,
-    getStoredCart,
+    getDataTOLocalStorage
 }

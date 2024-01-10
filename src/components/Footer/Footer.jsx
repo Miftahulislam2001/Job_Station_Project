@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <div>
-            <footer className="my-container footer p-10 lg:pt-16 bg-[#2c2c2c] text-[#FFFFF4] rounded">
+            <footer className="my-container footer p-10 lg:pt-16 bg-[#2c2c2c] text-[#FFFFF4] rounded rounded-e-none">
                 <div>
                     <Link to='/'><img className='w-14 h-14 rounded-3xl border border-red-300' src="https://cdn5.vectorstock.com/i/1000x1000/44/04/looking-for-job-icon-vector-20994404.jpg" alt="" /></Link>
                     <p>JobStation Industries Ltd<br />All Time services This Company</p>
@@ -38,7 +38,7 @@ const Footer = () => {
                 </div>
             </footer>
 
-            <footer className="my-container footer footer-center p-4 bg-[#1A1A1A] text-white">
+            <footer className="my-container footer footer-center p-4 bg-[#2c2c2c] text-white">
                 <div>
                     <p>Copyright © 2023 - All right reserved by JobStation Industries Ltd</p>
                 </div>
