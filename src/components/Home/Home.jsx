@@ -31,7 +31,7 @@ const Home = () => {
     <div className="my-2">
       <div className="my-container mt-20 flex flex-col justify-between lg:flex-row">
         {/* Text Content */}
-        <div className="mb-10 lg:max-w-lg  lg:pr-5 lg:mb-0">
+        <div className="mb-10 lg:max-w-lg  lg:pr-0 lg:mb-0">
           <div className="max-w-xl mb-6 lg:mt-8">
             <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
               One Step Closer To Your <br className="hidden md:block" />{" "}
@@ -86,7 +86,7 @@ const Home = () => {
       </div> 
 
       {/* Features Job Section */}
-      <div className="my-container mt-7">
+      <div className=" mt-7">
         <h2 className="text-center text-[48px] font-bold">Featured Jobs</h2>
         <p className="text-center my-4">
           Explore thousands of job opportunities with all the information you
