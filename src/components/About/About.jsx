@@ -67,7 +67,7 @@ const About = () => {
                 type='monotone'
                 dataKey='uv'
                 stroke='#8884d8'
-                fill='#8884d8'/>
+                fill='#E0F2FE'/>
 
 
         </AreaChart>
