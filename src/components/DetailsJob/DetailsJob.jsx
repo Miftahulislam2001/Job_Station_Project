@@ -34,7 +34,7 @@ const DetailsJob = () => {
 
 	return (
 		<div className='my-container flex flex-col'>
-			<div className='flex justify-center items-center text-2xl font-bold text-center font-serif min-h-[25vh] drop-shadow-lg'>
+			<div className='flex justify-center items-center text-2xl font-bold text-center font-serif min-h-[20vh] drop-shadow-lg'>
 				JOB DETAILS
 			</div>
 
